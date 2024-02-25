@@ -1,5 +1,5 @@
 
-public class Prob_24 {
+public class Prob4_24 {
 
 	public static void main(String[] args) {
 		for (int i = 1; i <= 5; i++) {
