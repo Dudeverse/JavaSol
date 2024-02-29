@@ -1,3 +1,4 @@
+// using a structured equivalent to replace break statement
 
 public class Prob4_26 {
 
