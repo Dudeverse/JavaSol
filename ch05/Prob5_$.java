@@ -30,7 +30,9 @@ public class Prob5_$ {
 		System.out.println(Math.sqrt(Math.pow(d, f)));
 		System.out.println(Math.tan(d));
 		System.out.println(Math.max(-19.9, -21.1));
-		
+		System.out.println("Holy" + " Roller!");
+		System.out.println("Concatenated Value of c + d is: " + c + d);
+		System.out.println("Sum value of c + d is : " + (c + d));
 		
 		
 
