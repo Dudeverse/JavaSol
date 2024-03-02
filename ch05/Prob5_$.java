@@ -9,7 +9,24 @@ public class Prob5_$ {
 		double c = 13.0;
 		double d = 3.0;
 		double f = 4.0;
+		double n = -9.5;
 		System.out.println(Math.sqrt(c + d * f));
+		System.out.println(Math.abs(n));
+		System.out.println(Math.ceil(n));
+		System.out.println(Math.ceil(f));
+		System.out.println(Math.ceil(d));
+		System.out.println(Math.exp(d));
+		System.out.println(Math.floor(n));
+		System.out.println(Math.log(Math.E));
+		System.out.println(Math.max(c, n));
+		System.out.println(Math.min(c, n));
+		System.out.println(Math.pow(d, f));
+		System.out.println(Math.sin(d));
+		System.out.println(Math.sqrt(Math.pow(d, f)));
+		System.out.println(Math.tan(d));
+		System.out.println(Math.max(-19.9, -21.1));
+		
+		
 		
 
 	}
