@@ -33,6 +33,8 @@ public class Prob5_$ {
 		System.out.println("Holy" + " Roller!");
 		System.out.println("Concatenated Value of c + d is: " + c + d);
 		System.out.println("Sum value of c + d is : " + (c + d));
+		System.out.println("Sum value of 2(c + d) is : " + 2*(c + d));
+
 		
 		
 
