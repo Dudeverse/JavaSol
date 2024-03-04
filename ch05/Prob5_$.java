@@ -7,7 +7,7 @@ public class Prob5_$ {
 		
 		//Another example
 		double c = 13.0;
-		double d = 3.0;
+		double d = 5.0;
 		double f = 4.0;
 		double n = -9.5;
 		// "HIGH PRECISION"value of pi
