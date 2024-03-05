@@ -34,10 +34,27 @@ public class Prob5_$ {
 		System.out.println("Concatenated Value of c + d is: " + c + d);
 		System.out.println("Sum value of c + d is : " + (c + d));
 		System.out.println("Sum value of 2(c + d) is : " + 2*(c + d));
-
+		
+		// method overloading
+		System.out.printf("Square of integer 7 is %d%n",   square(80)    );
+		System.out.printf("Square of double 7.5 is %f%n",  square(7.5)          );
+			 
+		
+		
 		
 		
 
 	}
+	
+	public static int square(int intValue) {
+		System.out.printf("%nCalled square with int argument: %d%n",intValue);
+		return intValue * intValue;
+	}
+	
+	public static double square(double doubleValue) {
+		System.out.printf("%nCalled square with double argument: %.3f%n",doubleValue);
+		return doubleValue * doubleValue;
+	}
 
+	
 }
