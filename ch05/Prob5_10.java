@@ -8,9 +8,9 @@ public class Prob5_10 {
 		double z = input.nextDouble();
 		
 		System.out.printf("%f rounded to the nearest integer is   : %d%n",z,roundToInteger(z));
-		System.out.printf("%f rounded to the nearest tenth is     : %.5f%n",z,roundToTenths(z));
-		System.out.printf("%f rounded to the nearest Hundredth is : %.5f%n",z,roundToHundredths(z));
-		System.out.printf("%f rounded to the nearest Thousandth is: %.5f%n",z,roundToThousandths(z));
+		System.out.printf("%f rounded to the nearest tenth is     : %.2f%n",z,roundToTenths(z));
+		System.out.printf("%f rounded to the nearest Hundredth is : %.3f%n",z,roundToHundredths(z));
+		System.out.printf("%f rounded to the nearest Thousandth is: %.4f%n",z,roundToThousandths(z));
 
 	}
 	
