@@ -7,7 +7,7 @@ public class Prob5_26 {
 		System.out.print("Please enter a four digit number: ");
 		int number = input.nextInt();
 		
-		System.out.printf("Sum of the digits of %d is %d",number, sum_of_digits(number));
+		System.out.printf("Sum of the digits of %d is:  %d",number, sum_of_digits(number));
 
 	}
 	public static int sum_of_digits(int num) {
