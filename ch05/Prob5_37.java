@@ -9,6 +9,7 @@ public class Prob5_37 {
 	}
 	
 	public static void startApp() {
+		Scanner input = new Scanner(System.in);
 		int user_answer;
 		int correct_answer;
 		int count_Right = 0;
@@ -16,7 +17,7 @@ public class Prob5_37 {
 		correct_answer = generateQuestion();
 		
 		do {
-			Scanner input = new Scanner(System.in);
+			//Scanner input = new Scanner(System.in);
 			user_answer = input.nextInt();
 			total_Count++;
 			System.out.printf("Attempts so far : %d%n", total_Count);
