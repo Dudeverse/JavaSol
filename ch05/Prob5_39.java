@@ -9,53 +9,67 @@ public class Prob5_39 {
 	}
 	
 	public static void startApp() {
-		Scanner input = new Scanner(System.in);
-		int user_answer;
-		int correct_answer;
-		int count_Right = 0;
-		int total_Count = 0;
-		
-		System.out.println("Hello! Welcome to Computer Assisted Instruction!");
+	    Scanner input = new Scanner(System.in);
+	    int user_answer;
+	    int correct_answer;
+	    int count_Right = 0;
+	    int total_Count = 0;
+	    String continueChoice="";
 
-		System.out.print("Please enter a difficulty level (1 or 2): ");
-		int response = input.nextInt();
-		
-		System.out.print("Please enter Problem type:  (1 = Addition, 2 = Multiplication, 3 = Subtraction, 5 = Random): ");
-		int type = input.nextInt();
-		
-		
-		correct_answer=printQuestion(response,type);
-		
-		
-		do {
-			user_answer = input.nextInt();
-			total_Count++;
-			System.out.printf("Attempts so far : %d%n", total_Count);
-			
-			if (total_Count==10) {
-				
-				System.out.println("Assessment over! Thanks!\n");
-				issueReport(count_Right, total_Count);
-				
-			} else if (user_answer==correct_answer) {
-				
-				count_Right++;
-				issuePositiveResponse();
-				System.out.println();
-				correct_answer=printQuestion(response,type);// generate a new question if answer is correct
-				
-			} else {
-				
-				issueNegativeResponse();
-				System.out.print("Answer  : ");
-				
-			}
-		} while (user_answer!=correct_answer && total_Count <10); // generate report after 10 attempts
+	    System.out.println("Hello! Welcome to Computer Assisted Instruction!");
+
+	    do {
+	        System.out.print("Please enter a difficulty level (1 or 2): ");
+	        int response = input.nextInt();
+
+	        System.out.print("Please enter Problem type:  (1 = Addition, 2 = Multiplication, 3 = Subtraction, 5 = Random): ");
+	        int type = input.nextInt();
+
+	        do {
+	            correct_answer = printQuestion(response, type);
+
+	            while (total_Count < 10) {
+	                user_answer = input.nextInt();
+	                total_Count++;
+	                System.out.printf("Attempts so far : %d%n", total_Count);
+
+	                if (user_answer == correct_answer) {
+	                    count_Right++;
+	                    issuePositiveResponse();
+	                    System.out.println();
+	                    if (total_Count<10) {
+		                    correct_answer = printQuestion(response, type);// generate new question if answer is correct
+	                    }
+	                } else {
+	                    issueNegativeResponse();
+	                    System.out.print("Answer  : ");
+	                }
+	            }
+
+	            if (total_Count == 10) {
+	                System.out.println("Assessment over! Thanks!");
+	                issueReport(count_Right, total_Count);
+
+	                System.out.print("Do you want to continue? (y/n): ");
+	                continueChoice = input.next();
+	                if (!continueChoice.equalsIgnoreCase("y")) {
+	                    break; // exit the inner loop if user does not want to continue
+	                }
+
+	                total_Count = 0;
+	                count_Right = 0;
+	            }
+	        } while (total_Count == 10 && continueChoice.equalsIgnoreCase("y"));
+
+	        if (!continueChoice.equalsIgnoreCase("y")) {
+	            break; // exit the outer loop if user does not want to continue after the last assessment
+	        }
+	    } while (true); // loop indefinitely until user decides to stop
 	}// end of startApp
+
 	
 	public static int generateQuestion(int type) {
 		SecureRandom rand_num = new SecureRandom();
-		
 		int num1 = 1 + rand_num.nextInt(9);
 		int num2 = 1 + rand_num.nextInt(9);
 		int result = 0;
@@ -87,13 +101,14 @@ public class Prob5_39 {
 	
 	public static int generateHardQuestion(int type) {
 		SecureRandom rand_num = new SecureRandom();
-		
 		int num1 = 1 + rand_num.nextInt(99);
 		int num2 = 1 + rand_num.nextInt(99);
 		int result = 0;
+		
 		if (type==5) {
 			type = 1 + rand_num.nextInt(3);
 		}
+		
 		switch(type) {
 		case 1:
 			result = num1+num2;
@@ -117,7 +132,6 @@ public class Prob5_39 {
 	
 	public static void issuePositiveResponse() {
 		SecureRandom rand_num = new SecureRandom();
-		
 		int num = 1 + rand_num.nextInt(6);
 		
 		switch(num) {
@@ -184,7 +198,6 @@ public class Prob5_39 {
 			System.out.println();
 		}
 		
-		startApp(); // reset after assessment report is generated.
 	}
 	
 	public static int printQuestion(int response, int type) {
@@ -198,5 +211,4 @@ public class Prob5_39 {
 	}
 }
 // end of classBody
-
 
