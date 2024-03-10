@@ -7,9 +7,9 @@ public class Prob5_23 {
         int number = scanner.nextInt();
         
         if(isPalindrome(number)) {
-            System.out.println(number + " is a palindrome.");
+            System.out.printf("%d is a palindrome.%n", number);
         } else {
-            System.out.println(number + " is not a palindrome.");
+            System.out.printf("%d is not a palindrome.", number);
         }
         
         
