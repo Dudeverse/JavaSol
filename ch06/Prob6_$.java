@@ -1,4 +1,4 @@
-// playground file to test example code
+// Restarting chapter-6 this time fr fr
 // finished 6.1
 public class Prob6_$ {
 
