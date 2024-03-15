@@ -26,7 +26,29 @@ public class Prob6_$ {
 			System.out.printf("%5d%8d%n", counter, array[counter]);
 		}
 		
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println("Example-3");
 		
-	}
+		final int ARRAY_LENGTH = 10;
+		int[] array1 = new int[ARRAY_LENGTH];
+		int sum_So_far = 0;
+		// first fill up the array
+		for (int counter = 0; counter < array1.length; counter++) {
+			array1[counter]= 2 + 2 * counter;
+		}
 		
+		System.out.printf("%s%8s%n", "Index", "Value"); // column headings
+		
+		// second show the array
+		for (int counter = 0; counter <array1.length; counter++) {
+			System.out.printf("%5d%8d  ", counter, array1[counter]);
+			sum_So_far  = sum_So_far + array1[counter];
+			System.out.printf("sum so far: %d%n", sum_So_far);
+		}
+
+		System.out.printf("Sum of elements in the array is: %d", sum_So_far);
+		
+}
 }
