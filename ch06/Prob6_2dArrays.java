@@ -17,9 +17,14 @@ public class Prob6_2dArrays {
 		int total = 0;
 		for (int row = 0; row <array.length; row++) {
 			for (int col = 0; col <array[row].length; col++) {
+				
+				if (row==1) {
+					array[row][col] =0;
+				}else {
+					total = total + array[row][col]; 
+				}
 				System.out.printf("%d ",array[row][col]);
-				total = total + array[row][col]; 
-			}
+			}	
 			System.out.println();
 		}
 		System.out.printf("sum of all elements in array is: %d%n",total);
