@@ -12,8 +12,8 @@ public class Prob6_MyOwnCLIGame {
 			int n4 = Integer.parseInt(args[3]);
 			int n5 = Integer.parseInt(args[4]); 
 			
-			int sum = n1 + n2 + n3 + n4 + n5;
-			System.out.printf("Sum: %d%n", sum);
+			int product = n1 * n2 * n3 * n4 * n5;
+			System.out.printf("Product: %d%n", product);
 		}
 	}
 
